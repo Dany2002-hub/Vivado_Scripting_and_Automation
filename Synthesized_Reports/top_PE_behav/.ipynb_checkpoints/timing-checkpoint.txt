@@ -1,0 +1,66 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 25 23:55:33 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_CLA64
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 a[4]
+                            (input port)
+  Destination:            cout
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.929ns  (logic 5.148ns (39.816%)  route 7.781ns (60.184%))
+  Logic Levels:           15  (IBUF=1 LUT4=1 LUT5=1 LUT6=11 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  a[4] (IN)
+                         net (fo=0)                   0.000     0.000    a[4]
+                         IBUF (Prop_ibuf_I_O)         0.923     0.923 r  a_IBUF[4]_inst/O
+                         net (fo=6, unplaced)         0.800     1.722    a_IBUF[4]
+                         LUT4 (Prop_lut4_I0_O)        0.152     1.874 r  sum_OBUF[27]_inst_i_16/O
+                         net (fo=1, unplaced)         1.111     2.985    sum_OBUF[27]_inst_i_16_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.109 f  sum_OBUF[27]_inst_i_14/O
+                         net (fo=1, unplaced)         0.449     3.558    sum_OBUF[27]_inst_i_14_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.682 f  sum_OBUF[27]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     4.142    sum_OBUF[27]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.266 f  sum_OBUF[38]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     4.715    sum_OBUF[38]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.839 f  sum_OBUF[38]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     5.288    sum_OBUF[38]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     5.412 f  sum_OBUF[38]_inst_i_5/O
+                         net (fo=3, unplaced)         0.467     5.879    sum_OBUF[38]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.003 f  sum_OBUF[43]_inst_i_6/O
+                         net (fo=3, unplaced)         0.467     6.470    sum_OBUF[43]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     6.594 f  sum_OBUF[43]_inst_i_5/O
+                         net (fo=4, unplaced)         0.473     7.067    sum_OBUF[43]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.191 f  sum_OBUF[54]_inst_i_8/O
+                         net (fo=3, unplaced)         0.467     7.658    sum_OBUF[54]_inst_i_8_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.782 f  sum_OBUF[58]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.231    sum_OBUF[58]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.355 f  sum_OBUF[58]_inst_i_3/O
+                         net (fo=6, unplaced)         0.481     8.836    sum_OBUF[58]_inst_i_3_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.960 f  sum_OBUF[63]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.420    sum_OBUF[63]_inst_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     9.544 r  cout_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.344    cout_OBUF
+                         OBUF (Prop_obuf_I_O)         2.585    12.929 r  cout_OBUF_inst/O
+                         net (fo=0)                   0.000    12.929    cout
+                                                                      r  cout (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

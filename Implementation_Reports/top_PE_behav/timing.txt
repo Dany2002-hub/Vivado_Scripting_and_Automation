@@ -1,0 +1,44 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Feb 26 21:56:07 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_PE_behav
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 data_in[2]
+                            (input port)
+  Destination:            data_out[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.770ns  (logic 3.989ns (51.334%)  route 3.781ns (48.666%))
+  Logic Levels:           4  (IBUF=1 LUT4=1 LUT5=1 OBUFT=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V14                                               0.000     0.000 f  data_in[2] (IN)
+                         net (fo=0)                   0.000     0.000    data_in[2]
+    V14                  IBUF (Prop_ibuf_I_O)         0.931     0.931 f  data_in_IBUF[2]_inst/O
+                         net (fo=2, routed)           1.430     2.361    data_in_IBUF[2]
+    SLICE_X0Y4           LUT5 (Prop_lut5_I1_O)        0.124     2.485 r  data_out_OBUFT[0]_inst_i_2/O
+                         net (fo=1, routed)           0.484     2.969    data_out_OBUFT[0]_inst_i_2_n_0
+    SLICE_X0Y4           LUT4 (Prop_lut4_I3_O)        0.118     3.087 r  data_out_OBUFT[0]_inst_i_1/O
+                         net (fo=1, routed)           1.868     4.954    data_out_OBUF[0]
+    V15                  OBUFT (Prop_obuft_I_O)       2.816     7.770 r  data_out_OBUFT[0]_inst/O
+                         net (fo=0)                   0.000     7.770    data_out[0]
+    V15                                                               r  data_out[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

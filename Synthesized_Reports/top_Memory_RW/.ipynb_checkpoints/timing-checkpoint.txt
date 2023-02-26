@@ -1,0 +1,40 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 25 22:44:53 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_Memory_RW
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 regfile_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q1[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.839ns  (logic 5.039ns (86.304%)  route 0.800ns (13.696%))
+  Logic Levels:           2  (OBUF=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  regfile_reg_1/CLKARDCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[0])
+                                                      2.454     2.454 r  regfile_reg_1/DOADO[0]
+                         net (fo=1, unplaced)         0.800     3.254    q1_OBUF[0]
+                         OBUF (Prop_obuf_I_O)         2.585     5.839 r  q1_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     5.839    q1[0]
+                                                                      r  q1[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

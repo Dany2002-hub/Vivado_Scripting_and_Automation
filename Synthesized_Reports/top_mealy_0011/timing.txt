@@ -1,0 +1,42 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Feb 26 21:18:24 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_mealy_0011
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 w
+                            (input port)
+  Destination:            z
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.231ns  (logic 3.632ns (69.427%)  route 1.599ns (30.573%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  w (IN)
+                         net (fo=0)                   0.000     0.000    w
+                         IBUF (Prop_ibuf_I_O)         0.923     0.923 r  w_IBUF_inst/O
+                         net (fo=3, unplaced)         0.800     1.722    m1/w_IBUF
+                         LUT3 (Prop_lut3_I2_O)        0.124     1.846 r  m1/z/O
+                         net (fo=1, unplaced)         0.800     2.646    z_OBUF
+                         OBUF (Prop_obuf_I_O)         2.585     5.231 r  z_OBUF_inst/O
+                         net (fo=0)                   0.000     5.231    z
+                                                                      r  z (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

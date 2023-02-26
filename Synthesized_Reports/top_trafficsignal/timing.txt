@@ -1,0 +1,39 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Feb 26 21:44:24 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_trafficsignal
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 east_dir_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            east_dir[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.227ns  (logic 3.427ns (81.081%)  route 0.800ns (18.919%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  east_dir_reg[0]/C
+                         FDRE (Prop_fdre_C_Q)         0.667     0.667 r  east_dir_reg[0]/Q
+                         net (fo=1, unplaced)         0.800     1.467    east_dir_OBUF[0]
+                         OBUF (Prop_obuf_I_O)         2.760     4.227 r  east_dir_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     4.227    east_dir[0]
+                                                                      r  east_dir[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
