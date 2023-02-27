@@ -45,6 +45,15 @@ while {[gets $read_file line] != -1} {
 
 close $read_file
 close $dest_file
+
+set write_file [open "Implementation_Reports/[string trimright [lindex $argv 0]]/Is_Impl.txt" w]
+puts $write_file "NO"
+close $write_file
+
+set write_file [open "Implementation_Reports/[string trimright [lindex $argv 0]]/impl_error.txt" w]
+puts $write_file "ERROR: Can't be implemented as it is not synthesizable"
+close $write_file
+
 }
 
 reset_run impl_1
