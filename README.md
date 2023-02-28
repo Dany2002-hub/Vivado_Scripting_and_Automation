@@ -6,10 +6,34 @@ ALEF_Vivado (Automated Library Evaluation Framework) is a tool coded up in Pytho
 
 ## Setting up the Environment
 
-This tool was designed and implemented on Linux Environment. To run this python tool in Linux Environment, we need to make sure that the following things are setup in your system:
+This tool was designed and implemented on CentOS Linux Environment. To run this python tool on this environment, we need to make sure that the following things are setup in your system:
 
-#### 1) Creating a Virtual Environment
-It is quite important to create a virtual environment to run your tool so that you can install the tool-specific packages in that without interferring with the root account. To create a virtual environment named ```icdesignvirtual``` for example in your Home directory, run the following shell command in your Linux Terminal.
+### 1) Installing Python3
+Since the tool is developed using Python3 programming language and its packages, it is important for a user running this tool to have python3 installed in their systems. Before installing python3, update the environment w.r.t its packages by running the following shell command on your Linux terminal.
+```
+[vlsidesign9@nanodcserver ~]$ yum update -y
+```
+Once the environmnet is upto date, all we need do to install Python3 is run the following command.
+```
+[vlsidesign9@nanodcserver ~]$ yum install -y python3
+```
+Make sure to run these commands as a root. 
+
+### 2) Creating a Virtual Environment
+It is quite important to create a virtual environment to run your tool so that you can install the tool-specific packages in that without interferring with the root account. To create a virtual environment named ```icdesignvirtual``` for example in your Home directory, run the following command.
+```
+[vlsidesign9@nanodcserver ~]$ python3 -m venv ~/icdesignvirtual
+```
+### 3) Installing Jupyter Lab
+The Integrated Develpoment Environment (IDE) used to design and implement the tool is Jupyter Lab. To install jupyter lab, we initailly get into our virtual environment.
+```
+[vlsidesign9@nanodcserver ~]$ source ~/icdesignvirtual/bin/activate
+```
+Once you get into your virtual environment, install jupyter lab by running this command.
+```
+(icdesignvirtual) [vlsidesign9@nanodcserver ~]$ pip install jupypterlab
+```
+
 
 
 
