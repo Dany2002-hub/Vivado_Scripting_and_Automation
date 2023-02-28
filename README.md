@@ -6,4 +6,11 @@ ALEF_Vivado (Automated Library Evaluation Framework) is a tool coded up in Pytho
 
 ## Setting up the Environment
 
-This tool was designed and implemented on Linux Environment. 
+This tool was designed and implemented on Linux Environment. To run this python tool in Linux Environment, we need to make sure that the following things are setup in your system:
+
+#### 1) Creating a Virtual Environment
+It is quite important to create a virtual environment to run your tool so that you can install the tool-specific packages in that without interferring with the root account. To create a virtual environment named ```icdesignvirtual``` for example in your Home directory, run the following shell command in your Linux Terminal.
+
+
+
+
