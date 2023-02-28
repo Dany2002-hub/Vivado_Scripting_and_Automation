@@ -33,10 +33,13 @@ Once you get into your virtual environment, install jupyter lab by running this 
 ```
 (icdesignvirtual) [vlsidesign9@nanodcserver ~]$ pip install jupypterlab
 ```
-After installing, to get to the jupyter lab terminal from the same or different directory, just get into your virtual environment, and run the following command.
+After installing, to get access to the jupyter lab terminal from the same or different directory, just get into your virtual environment, and run the following command.
 ```
 (icdesignvirtual) [vlsidesign9@nanodcserver ~]$ jupyter lab
 ```
+## TCL Script to add input Verilog modules for automation
+
+
 
 
 
