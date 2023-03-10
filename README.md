@@ -37,8 +37,8 @@ After installing, to get access to the jupyter lab terminal from the same or dif
 ```
 (icdesignvirtual) [vlsidesign9@nanodcserver ~]$ jupyter lab
 ```
-## TCL Script to add input Verilog/SystemVerilog modules to a new Vivado Project for automation
-When the ALEF_Vivado tool runs the ``` tcl_add.tcl ``` script provided in the ``` Scripting/Script ``` folder, it performs the following tasks in a sequential order:
+## TCL Script to add input Verilog/SystemVerilog modules to a new Vivado Project
+When the tool runs the ``` tcl_add.tcl ``` script provided in the ``` Scripting/Script ``` folder, it performs the following tasks in a sequential order:
 
 1) Creates a new project with the specified name, directory, and Target FPGA devive. Here, I have created a new project named **Automation_modules** , which is stored in the **Automation** folder of the present working directory and provided **xc7a35tcpg236-1** as the FPGA part number which is used in the Digilent Basys 3 board.
 2) Sets a target board for the created project. Here, I have set the target board to be the **Digilent Basys 3** board.
@@ -46,7 +46,12 @@ When the ALEF_Vivado tool runs the ``` tcl_add.tcl ``` script provided in the ``
 4) Updates the compile order of the added design files.
 5) Finally, closes the project. 
 
-## TCL Script to automate the synthesis and implementation of the input Verilog/SystemVerilog modules
+## TCL Script to automate the synthesis and implementation of the top modules
+As mentioned in the description, the tool is designed to automate only the modules named as ``` top_**** ```. Therefore, it is necessary for the users to name their input modules as mentioned above.The tool runs the ``` tcl_run.tcl ``` script provided in the ``` Scripting/Script ``` folder for each top module by looping through the provided list of top modules. These are the following tasks that the ``` tcl_run.tcl ``` script performs in a sequential order at each iteration:
+
+1) 
+
+
 
 
 
