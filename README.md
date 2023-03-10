@@ -38,6 +38,7 @@ After installing, to get access to the jupyter lab terminal from the same or dif
 (icdesignvirtual) [vlsidesign9@nanodcserver ~]$ jupyter lab
 ```
 ## TCL Script to add input Verilog modules to a new Vivado Project for automation
+The ``` tcl_add.tcl ``` script provided in the Scripting 
 
 
 
