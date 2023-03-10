@@ -63,7 +63,7 @@ As mentioned in the description, this tool is designed to automate only the modu
 13) If the otherwise happens meaning if the implementation fails, then the runme.log file containing the error message(s) will be copied to a new file named **impl_error.txt** for the user to identify the errors in the implementation easily, followed by a text file named **Is_Impl.txt** which will store **NO** meaning the module has failed implementation. These files will be created in the same directory mentioned in the above point.
 14) Finally, closes the project.
 
-After every iteration of running the ``` tcl_run.tcl ``` script for the respective top module, the tool notifies the user of the completion of the automation for the particular module with the duration of automating that module in the unit of hours via the python output terminal. Further it will also display whether the automated module passed synthesis/implementation so as to make the user aware of the possible red signals in the automation. 
+After every iteration of running the ``` tcl_run.tcl ``` script for the respective top module, the tool notifies the user of the completion of the automation for the particular module with the duration of automating that module in the unit of hours via the python output terminal. Further it will also display whether the automated module passed synthesis/implementation so as to make the user aware of the possible failures in the automation, if any. 
 
 
 
